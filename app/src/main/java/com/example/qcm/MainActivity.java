@@ -8,12 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     //========Variable Main========
     public static String id;
     public static String pass;
+    private TextView debug;
     private ImageView zelda;
     private EditText editID;
     private EditText editPass;
@@ -23,17 +25,22 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        this.id = "";
-        this.pass = "";
-        this.zelda = findViewById(R.id.zelda);
-        this.editID = findViewById(R.id.editID);
-        this.editPass = findViewById(R.id.editPass);
-        this.connexion = findViewById(R.id.connexion);
-
+        try{
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            this.id = "";
+            this.pass = "";
+            this.zelda = findViewById(R.id.zelda);
+            this.editID = findViewById(R.id.editID);
+            this.editPass = findViewById(R.id.editPass);
+            this.connexion = findViewById(R.id.connexion);
+            this.debug = findViewById(R.id.debug);
+        }catch(Exception e){
+            this.debug.setText("AH ! \n" + e);
+        }
     }
 
     public void onClickSeConnecter(View vue){
@@ -46,11 +53,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickCreationDeCompte(View vue){
-        Intent intentCreation = new Intent(MainActivity.this, CreationDeCompte.class);
-        String s3 = "Clique sur la demande de création !";
-        Toast t = Toast.makeText(getApplicationContext(),s3, Toast.LENGTH_SHORT);
-        t.show();
-        startActivity(intentCreation);
+        try {
+            Intent intentCreation = new Intent(MainActivity.this, CreationDeCompte.class);
+            String s3 = "Clique sur la demande de création !";
+            Toast t = Toast.makeText(getApplicationContext(), s3, Toast.LENGTH_SHORT);
+            t.show();
+            startActivity(intentCreation);
+        }catch (Exception e){
+            this.debug.setText("AH ! \n" + e);
+        }
     }
 
 }

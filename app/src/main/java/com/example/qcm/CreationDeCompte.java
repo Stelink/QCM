@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.Toast;
 
 class CreationDeCompte extends Activity {
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
