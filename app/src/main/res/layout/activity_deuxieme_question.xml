@@ -7,5 +7,55 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Deuxième question !" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quels sont les 3 personages principaux de The Legend of Zelda : Twilight Princess ?" />
+
+    <CheckBox
+        android:id="@+id/Zelda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zelda" />
+
+    <CheckBox
+        android:id="@+id/Tetra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tetra" />
+
+    <CheckBox
+        android:id="@+id/Ganondorf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ganondorf" />
+
+    <CheckBox
+        android:id="@+id/Link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Link" />
+
+    <CheckBox
+        android:id="@+id/jfa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JFA" />
+
+    <Button
+        android:onClick="onClickValider"
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Valider" />
+
+    <Button
+        android:onClick="onClickAnnuler"
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Annuler" />
 </LinearLayout>

@@ -10,7 +10,6 @@ public class PremiereQuestionActivity extends Activity {
 
     private RadioButton oui;
     private RadioButton non;
-    private boolean bool;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,11 +22,8 @@ public class PremiereQuestionActivity extends Activity {
     public void onClickValider(View vue){
         Intent intentDeuxiemeQuestion = new Intent(PremiereQuestionActivity.this, DeuxiemeQuestionActivity.class);
         if(this.oui.isChecked())
-            bool = true;
-        else
-            bool = false;
-        if(bool)
             startActivity(intentDeuxiemeQuestion);
+
     }
 
     public void onClickAnnuler(View vue){

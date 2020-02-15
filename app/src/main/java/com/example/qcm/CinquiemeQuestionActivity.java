@@ -11,7 +11,7 @@ public class CinquiemeQuestionActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_premiere_question);
+        setContentView(R.layout.activity_cinquieme_question);
 
     }
 
