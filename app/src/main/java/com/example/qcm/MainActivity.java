@@ -15,10 +15,7 @@ public class MainActivity extends AppCompatActivity {
     //========Variable Main========
     public static String id;
     public static String pass;
-    private TextView debug;
     private ImageView zelda;
-    private EditText editID;
-    private EditText editPass;
     private Button connexion;
     private Button creationCompte;
     //========Variable Creation De Compte====
@@ -31,37 +28,23 @@ public class MainActivity extends AppCompatActivity {
         try{
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
+
             this.id = "";
             this.pass = "";
             this.zelda = findViewById(R.id.zelda);
-            this.editID = findViewById(R.id.editID);
-            this.editPass = findViewById(R.id.editPass);
             this.connexion = findViewById(R.id.connexion);
-            this.debug = findViewById(R.id.debug);
         }catch(Exception e){
-            this.debug.setText("AH ! \n" + e);
         }
     }
 
     public void onClickSeConnecter(View vue){
-        this.zelda.setImageResource(R.drawable.zelda);
-        this.pass = this.editPass.getText().toString();
-        this.id = this.editID.getText().toString();
-
-        Intent intentPQ = new Intent(MainActivity.this, PremiereQuestionActivity.class);
-        startActivity(intentPQ);
+        Intent intentSeCo = new Intent(MainActivity.this, SeConnecter.class);
+        startActivity(intentSeCo);
     }
 
     public void onClickCreationDeCompte(View vue){
-        try {
-            Intent intentCreation = new Intent(MainActivity.this, CreationDeCompte.class);
-            String s3 = "Clique sur la demande de création !";
-            Toast t = Toast.makeText(getApplicationContext(), s3, Toast.LENGTH_SHORT);
-            t.show();
-            startActivity(intentCreation);
-        }catch (Exception e){
-            this.debug.setText("AH ! \n" + e);
-        }
+        Intent intentCreation = new Intent(MainActivity.this, CreationDeCompte.class);
+        startActivity(intentCreation);
     }
 
 }

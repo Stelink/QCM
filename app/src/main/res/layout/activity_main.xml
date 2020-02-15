@@ -26,38 +26,6 @@
             android:layout_height="100dp"
             app:srcCompat="@drawable/zelda" />
 
-        <TextView
-            android:id="@+id/viewID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="Identifiant" />
-
-        <EditText
-            android:id="@+id/editID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textAlignment="center"
-            android:text="pseudo" />
-
-        <TextView
-            android:id="@+id/viewPass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="Mot de passe" />
-
-        <EditText
-            android:id="@+id/editPass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textAlignment="center"
-            android:text="pass"
-            android:inputType="textPassword" />
-
         <Button
             android:onClick="onClickSeConnecter"
             android:id="@+id/connexion"
@@ -72,11 +40,6 @@
             android:layout_height="wrap_content"
             android:text="Créer un compte" />
 
-        <TextView
-            android:id="@+id/debug"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="dbeug" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

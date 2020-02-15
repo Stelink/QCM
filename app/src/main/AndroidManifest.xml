@@ -17,7 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".CreationDeCompte"></activity>
+        <activity android:name=".SeConnecter"></activity>
         <activity android:name=".PremiereQuestionActivity"></activity>
+        <activity android:name=".DeuxiemeQuestionActivity"></activity>
+        <activity android:name=".TroisiemeQuestionActivity"></activity>
+        <activity android:name=".QuatriemeQuestionActivity"></activity>
+        <activity android:name=".CinquiemeQuestionActivity"></activity>
     </application>
 
 </manifest>
