@@ -25,8 +25,8 @@ public class SeConnecter extends Activity {
         this.editID = findViewById(R.id.editID);
         this.editPass = findViewById(R.id.editPass);
 
+        Intent intentGetID = getIntent();
 
-        Intent intentGetID = new Intent(SeConnecter.this, CreationDeCompte.class);
         this.id = intentGetID.getStringExtra("EXTRA_ID");
         this.pass = intentGetID.getStringExtra("EXTRA_PASS");
 
@@ -41,7 +41,8 @@ public class SeConnecter extends Activity {
         if(this.editID.getText().toString().equals(this.id) && this.editPass.getText().toString().equals(this.pass))
             startActivity(intentPQ);
         else{
-            String toast = "Identifiant INCORRECTS" + " " + this.id + " " + this.pass;
+            String toast = "Identifiant Incorrects, vérifiez-les ou créez-vous un compte";
+                    //+ " \n" + this.id + " " + this.pass;
             Toast t = Toast.makeText(getApplicationContext(),toast, Toast.LENGTH_SHORT);
             t.show();
         }

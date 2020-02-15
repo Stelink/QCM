@@ -7,40 +7,41 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Première Question !" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Oui ou non ?" />
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/oui"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="Bah carrément que oui !" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/non"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="C'est non" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/button"
+        android:onClick="onClickValider"
+        android:id="@+id/valider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Valider" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/annuler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Annuler" />
 </LinearLayout>
