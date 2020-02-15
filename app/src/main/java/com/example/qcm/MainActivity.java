@@ -22,13 +22,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         try{
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
-
             this.id = "";
             this.pass = "";
             this.zelda = findViewById(R.id.zelda);

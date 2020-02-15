@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class SeConnecter extends Activity {
     public static String EXTRA_ID;
@@ -23,10 +24,26 @@ public class SeConnecter extends Activity {
         this.pass = "";
         this.editID = findViewById(R.id.editID);
         this.editPass = findViewById(R.id.editPass);
+
+
+        Intent intentGetID = new Intent(SeConnecter.this, CreationDeCompte.class);
+        this.id = intentGetID.getStringExtra("EXTRA_ID");
+        this.pass = intentGetID.getStringExtra("EXTRA_PASS");
+
+        String toast = this.id + " " + this.pass;
+        Toast t = Toast.makeText(getApplicationContext(),toast, Toast.LENGTH_SHORT);
+        t.show();
     }
 
     public void onClickSeConnecter(View vue){
         Intent intentPQ = new Intent(SeConnecter.this, PremiereQuestionActivity.class);
-        startActivity(intentPQ);
+
+        if(this.editID.getText().toString().equals(this.id) && this.editPass.getText().toString().equals(this.pass))
+            startActivity(intentPQ);
+        else{
+            String toast = "Identifiant INCORRECTS" + " " + this.id + " " + this.pass;
+            Toast t = Toast.makeText(getApplicationContext(),toast, Toast.LENGTH_SHORT);
+            t.show();
+        }
     }
 }

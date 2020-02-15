@@ -30,17 +30,16 @@ public class CreationDeCompte extends Activity {
     }
 
     public void onClickCreation(View vue){
-        Intent intentAccueil = new Intent(CreationDeCompte.this, MainActivity.class);
-        id = this.editID.getText().toString();
-        pass = this.editPass.getText().toString();
+        Intent intentSeConnecter = new Intent(CreationDeCompte.this, SeConnecter.class);
+        this.id = this.editID.getText().toString();
+        this.pass = this.editPass.getText().toString();
 
-        intentAccueil.putExtra("EXTRA_ID", id);
-        intentAccueil.putExtra("EXTRA_PASS", pass);
+        intentSeConnecter.putExtra("EXTRA_ID", this.id);
+        intentSeConnecter.putExtra("EXTRA_PASS", this.pass);
 
-
-        String s3 = "Clique sur la création !";
-        Toast t = Toast.makeText(getApplicationContext(),s3, Toast.LENGTH_SHORT);
+        Toast t = Toast.makeText(getApplicationContext(), this.id + " " + this.pass, Toast.LENGTH_SHORT);
         t.show();
-        startActivity(intentAccueil);
+        //Intent intentAccueil = new Intent(CreationDeCompte.this, MainActivity.class);
+        startActivity(intentSeConnecter);
     }
 }
