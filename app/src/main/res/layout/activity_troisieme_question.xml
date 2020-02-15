@@ -7,17 +7,39 @@
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Troisème Question !" />
 
-    <Button
-        android:id="@+id/button3"
+    <TextView
+        android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Vrai ou faux ?\nLes papillons vivent-ils qu'une seule journée ?" />
 
     <Button
-        android:id="@+id/button4"
+        android:onClick="onClickVrai"
+        android:id="@+id/vrai"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Vrai" />
+
+    <Button
+        android:onClick="onClickFaux"
+        android:id="@+id/faux"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Faux" />
+
+    <Button
+        android:onClick="onClickValider"
+        android:id="@+id/valider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Valider" />
+
+    <Button
+        android:onClick="onClickAnnuler"
+        android:id="@+id/annuler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Annuler" />
 </LinearLayout>
