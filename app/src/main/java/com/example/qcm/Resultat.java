@@ -38,8 +38,7 @@ public class Resultat extends Activity {
 
     public void resultat(){
         this.rating.setNumStars(5);
-
-        this.rating.setNumStars(this.scoreInt);
+        this.rating.setRating(this.scoreInt);
         this.score.setText(this.score.getText().toString() + " " + this.scoreInt + "/5");
     }
 }
