@@ -17,6 +17,7 @@ public class DeuxiemeQuestionActivity extends Activity {
     private CheckBox Ganondorf;
     private CheckBox Link;
     private ProgressBar progress;
+    private int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,21 +33,26 @@ public class DeuxiemeQuestionActivity extends Activity {
 
         Intent intentProgress = getIntent();
         int cent = intentProgress.getIntExtra("EXTRA_100", 0);
-        if(cent == 100/5)
-            this.progress.setProgress(cent);
-        else{
-            this.progress.setProgress(cent);
-        }
+
+        this.score = intentProgress.getIntExtra("EXTRA_SCORE", 0);
+
+        this.progress.setProgress(cent/5);
     }
 
     public void onClickValider(View vue){
         Intent intent3emeQuestion = new Intent(DeuxiemeQuestionActivity.this, TroisiemeQuestionActivity.class);
+        intent3emeQuestion.putExtra("EXTRA_100", this.progress.getProgress() + 100/5);
+
         if(this.Zelda.isChecked() && this.Ganondorf.isChecked() && this.Link.isChecked() && !this.Tetra.isChecked() && !this.JFA.isChecked()){
-            intent3emeQuestion.putExtra("EXTRA_100", this.progress.getProgress() + 100/5);
+            this.score += 1;
+            intent3emeQuestion.putExtra("EXTRA_SCORE", this.score);
+
+            Toast t = Toast.makeText(getApplicationContext(), this.score+"", Toast.LENGTH_SHORT);
+            t.show();
             startActivity(intent3emeQuestion);
         }
         else{
-            intent3emeQuestion.putExtra("EXTRA_100", this.progress.getProgress());
+            intent3emeQuestion.putExtra("EXTRA_SCORE", this.score + 0);
             startActivity(intent3emeQuestion);
         }
     }

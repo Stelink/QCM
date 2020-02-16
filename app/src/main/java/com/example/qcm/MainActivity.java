@@ -23,15 +23,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        try{
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
-            this.id = "";
-            this.pass = "";
-            this.zelda = findViewById(R.id.zelda);
-            this.connexion = findViewById(R.id.connexion);
-        }catch(Exception e){
-        }
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        this.id = "";
+        this.pass = "";
+        this.zelda = findViewById(R.id.zelda);
+        this.connexion = findViewById(R.id.connexion);
+        /*Intent intent = getIntent();
+        this.id = intent.getStringExtra("EXTRA_ID");
+        this.pass = intent.getStringExtra("EXTRA_PASS");
+
+        Intent intentConnexion = new Intent(this, SeConnecter.class);
+        intentConnexion.putExtra("EXTRA_ID", this.id);
+        intentConnexion.putExtra("EXTRA_PASS", this.pass);*/
     }
 
     public void onClickSeConnecter(View vue){

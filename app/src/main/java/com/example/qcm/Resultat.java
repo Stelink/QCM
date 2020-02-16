@@ -7,6 +7,7 @@ import android.os.PersistableBundle;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -15,6 +16,7 @@ public class Resultat extends Activity {
     private RatingBar rating;
     private TextView score;
     private int resultat;
+    private int scoreInt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,19 +28,18 @@ public class Resultat extends Activity {
         this.score = findViewById(R.id.score);
         Intent intentProgress = getIntent();
         int cent = intentProgress.getIntExtra("EXTRA_100", 0);
-        if(cent == 100/5)
-            this.progress.setProgress(this.progress.getProgress()+cent);
-        else{
-            this.progress.setProgress(this.progress.getProgress()+cent);
-        }
+        this.progress.setProgress(this.progress.getProgress()+cent);
+        this.scoreInt = intentProgress.getIntExtra("EXTRA_SCORE", 0);
         resultat();
+        Toast t = Toast.makeText(getApplicationContext(), this.scoreInt+"", Toast.LENGTH_SHORT);
+        t.show();
     }
 
 
     public void resultat(){
         this.rating.setNumStars(5);
-        this.resultat = this.progress.getProgress();
-        //this.rating.setNumStars(this.resultat);
-        this.score.setText(this.score.getText().toString() + " " + this.resultat/5 + "/20");
+
+        this.rating.setNumStars(this.scoreInt);
+        this.score.setText(this.score.getText().toString() + " " + this.scoreInt + "/5");
     }
 }

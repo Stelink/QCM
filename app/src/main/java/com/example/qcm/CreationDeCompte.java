@@ -30,16 +30,17 @@ public class CreationDeCompte extends Activity {
     }
 
     public void onClickCreation(View vue){
-        //Intent intentSeConnecter = new Intent(CreationDeCompte.this, SeConnecter.class);
-        //Intent intentAccueil = new Intent(CreationDeCompte.this, MainActivity.class);
+        Intent intentSeConnecter = new Intent(CreationDeCompte.this, SeConnecter.class);
         this.id = this.editID.getText().toString();
         this.pass = this.editPass.getText().toString();
+        if(!this.pass.contains("")){
 
+        }
         intentSeConnecter.putExtra("EXTRA_ID", this.id);
         intentSeConnecter.putExtra("EXTRA_PASS", this.pass);
 
-        Toast t = Toast.makeText(getApplicationContext(), this.id + " " + this.pass, Toast.LENGTH_SHORT);
-        t.show();
+        //Toast t = Toast.makeText(getApplicationContext(), this.id + " " + this.pass, Toast.LENGTH_SHORT);
+        //t.show();
         startActivity(intentSeConnecter);
     }
 }
