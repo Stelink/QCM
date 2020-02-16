@@ -23,6 +23,7 @@
         <activity android:name=".TroisiemeQuestionActivity"></activity>
         <activity android:name=".QuatriemeQuestionActivity"></activity>
         <activity android:name=".CinquiemeQuestionActivity"></activity>
+        <activity android:name=".Resultat"></activity>
     </application>
 
 </manifest>

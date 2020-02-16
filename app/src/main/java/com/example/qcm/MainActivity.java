@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     public static String pass;
     private ImageView zelda;
     private Button connexion;
-    private Button creationCompte;
     //========Variable Creation De Compte====
 
 

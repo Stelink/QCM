@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cinquième Question !" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dans une pièce carrée. Il y a 4 chats, un chat par coin. En face de chaque chat, il y a trois chats. Combien il y a-t-il de chat dans la pièce carrée ?" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RadioButton
+            android:id="@+id/quatre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4" />
+
+        <RadioButton
+            android:id="@+id/seize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="16" />
+
+        <RadioButton
+            android:id="@+id/douze"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/valider"
+        android:onClick="onClickValider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Valider" />
+
+    <Button
+        android:onClick="onClickAnnuler"
+        android:id="@+id/annuler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Annuler" />
+
 
 </LinearLayout>

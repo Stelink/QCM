@@ -9,6 +9,13 @@
         android:layout_height="wrap_content"
         android:text="Première Question !" />
 
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:max="500"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
@@ -41,6 +48,7 @@
 
     <Button
         android:id="@+id/annuler"
+        android:onClick="onClickAnnuler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Annuler" />

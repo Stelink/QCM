@@ -30,7 +30,8 @@ public class CreationDeCompte extends Activity {
     }
 
     public void onClickCreation(View vue){
-        Intent intentSeConnecter = new Intent(CreationDeCompte.this, SeConnecter.class);
+        //Intent intentSeConnecter = new Intent(CreationDeCompte.this, SeConnecter.class);
+        //Intent intentAccueil = new Intent(CreationDeCompte.this, MainActivity.class);
         this.id = this.editID.getText().toString();
         this.pass = this.editPass.getText().toString();
 
@@ -39,7 +40,6 @@ public class CreationDeCompte extends Activity {
 
         Toast t = Toast.makeText(getApplicationContext(), this.id + " " + this.pass, Toast.LENGTH_SHORT);
         t.show();
-        //Intent intentAccueil = new Intent(CreationDeCompte.this, MainActivity.class);
         startActivity(intentSeConnecter);
     }
 }
