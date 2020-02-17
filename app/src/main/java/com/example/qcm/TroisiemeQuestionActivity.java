@@ -10,7 +10,6 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
 public class TroisiemeQuestionActivity extends Activity {
     private boolean bool;
@@ -18,7 +17,7 @@ public class TroisiemeQuestionActivity extends Activity {
     private int score;
     private Button vrai;
     private Button faux;
-
+    private int tmp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,9 +28,9 @@ public class TroisiemeQuestionActivity extends Activity {
         this.faux = findViewById(R.id.faux);
         Intent intentProgress = getIntent();
         int cent = intentProgress.getIntExtra("EXTRA_100", 0);
-
+        this.tmp = cent;
         this.score = intentProgress.getIntExtra("EXTRA_SCORE", 0);
-        this.progress.setProgress(this.progress.getProgress()+cent);
+        this.progress.setProgress(40);
     }
 
     public void onClickValider(View vue) {
@@ -50,6 +49,8 @@ public class TroisiemeQuestionActivity extends Activity {
 
     public void onClickAnnuler(View vue){
         Intent intent = new Intent(this, DeuxiemeQuestionActivity.class);
+        this.progress.setProgress(this.progress.getProgress()-100/5);
+        this.score -= 1;
         startActivity(intent);
     }
 

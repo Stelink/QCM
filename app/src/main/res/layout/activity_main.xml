@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
@@ -17,12 +17,12 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="DROUET Steven TD1" />
+            android:text="DROUET Steven TD1"
+            android:textAlignment="center" />
 
         <ImageView
             android:id="@+id/zelda"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             app:srcCompat="@drawable/zelda" />
 
@@ -30,48 +30,48 @@
             android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Identifiant"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:text="Identifiant" />
+            android:textColor="@android:color/black" />
 
         <EditText
             android:id="@+id/editID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:textAlignment="center"
             android:inputType="textPersonName"
-            android:text="Pseudo" />
+            android:text="Pseudo"
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/textView14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Mot de passe"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:text="Mot de passe" />
+            android:textColor="@android:color/black" />
 
         <EditText
             android:id="@+id/editPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:inputType="textPassword"
             android:text="Pass1"
-            android:textAlignment="center"
-            android:inputType="textPassword" />
+            android:textAlignment="center" />
 
         <Button
-            android:onClick="onClickSeConnecter"
             android:id="@+id/connexion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onClickSeConnecter"
             android:text="Se connecter" />
 
         <Button
-            android:onClick="onClickCreationDeCompte"
             android:id="@+id/compte"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onClickCreationDeCompte"
             android:text="Créer un compte" />
 
     </LinearLayout>

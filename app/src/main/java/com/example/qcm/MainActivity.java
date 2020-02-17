@@ -37,18 +37,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickSeConnecter(View vue){
-        Intent intentSeCo = new Intent(MainActivity.this, PremiereQuestionActivity.class);
         Intent intentPQ = new Intent(this, PremiereQuestionActivity.class);
 
         if(this.editID.getText().toString().equals(this.id) && this.editPass.getText().toString().equals(this.pass))
             startActivity(intentPQ);
         else{
-            String toast = "Identifiant Incorrects, vérifiez-les ou créez-vous un compte";
-            //+ " \n" + this.id + " " + this.pass;
+            String toast = "Identifiants incorrects, vérifiez-les ou créez-vous un compte";
             Toast t = Toast.makeText(getApplicationContext(),toast, Toast.LENGTH_SHORT);
             t.show();
         }
-        startActivity(intentSeCo);
     }
 
     public void onClickCreationDeCompte(View vue){

@@ -7,21 +7,25 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:textSize="10pt"
+        android:textColor="@android:color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:text="Créer vos identifiants de connexion" />
 
     <ImageView
-        android:id="@+id/zelda"
+        android:id="@+id/perles"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/zelda" />
+        android:layout_height="249dp"
+        app:srcCompat="@drawable/perles" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="10pt"
         android:text="Pseudonyme ou email" />
 
     <EditText
@@ -35,6 +39,8 @@
 
     <TextView
         android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="10pt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mot de passe" />

@@ -12,6 +12,7 @@
         android:textSize="10pt"
         android:textColor="@android:color/black"
         android:textAlignment="center"
+
         android:text="Quatrième Question ! " />
 
     <ProgressBar
@@ -26,11 +27,12 @@
         android:layout_height="wrap_content"
         android:textSize="10pt"
         android:textColor="@android:color/black"
-        android:text="Qui n'est pas gentil ?" />
+        android:text="Qui c'est qui s'est fait virer ?" />
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
+        android:layout_marginBottom="25dp"
         android:layout_height="wrap_content" >
 
     </ListView>

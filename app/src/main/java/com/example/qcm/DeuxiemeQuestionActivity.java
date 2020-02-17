@@ -36,7 +36,7 @@ public class DeuxiemeQuestionActivity extends Activity {
 
         this.score = intentProgress.getIntExtra("EXTRA_SCORE", 0);
 
-        this.progress.setProgress(cent/5);
+        this.progress.setProgress(20);
     }
 
     public void onClickValider(View vue){

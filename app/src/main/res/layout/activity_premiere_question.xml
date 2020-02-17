@@ -35,13 +35,14 @@
             android:id="@+id/oui"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bah carrément que oui !" />
+            android:text="Carrément que oui !" />
 
         <RadioButton
             android:id="@+id/non"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="C'est non" />
+            android:layout_marginBottom="25dp"
+            android:text="C'est non." />
     </RadioGroup>
 
     <Button

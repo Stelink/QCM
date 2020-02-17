@@ -15,6 +15,7 @@ public class CinquiemeQuestionActivity extends Activity {
     private RadioButton douze;
     private ProgressBar progress;
     private int score;
+    private int tmp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,11 +28,9 @@ public class CinquiemeQuestionActivity extends Activity {
         Intent intentProgress = getIntent();
         int cent = intentProgress.getIntExtra("EXTRA_100", 0);
         this.score = intentProgress.getIntExtra("EXTRA_SCORE", 0);
-        if(cent == 100/5)
-            this.progress.setProgress(this.progress.getProgress()+cent);
-        else{
-            this.progress.setProgress(this.progress.getProgress()+cent);
-        }
+        this.tmp = cent;
+        this.progress.setProgress(80);
+
     }
 
     public void onClickValider(View vue){
@@ -51,6 +50,7 @@ public class CinquiemeQuestionActivity extends Activity {
     public void onClickAnnuler(View vue){
         Intent intent = new Intent(this, QuatriemeQuestionActivity.class);
         this.score -= 1;
+        this.progress.setProgress(this.progress.getProgress()-100/5);
         startActivity(intent);
     }
 }
