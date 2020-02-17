@@ -7,7 +7,10 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Deuxième question !" />
+        android:textColor="@android:color/black"
+        android:textSize="10pt"
+        android:textAlignment="center"
+        android:text="Deuxième Question !" />
 
     <ProgressBar
         android:id="@+id/progress"
@@ -17,6 +20,8 @@
 
     <TextView
         android:id="@+id/textView5"
+        android:textColor="@android:color/black"
+        android:textSize="10pt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Quels sont les 3 personages principaux de The Legend of Zelda : Twilight Princess ?" />

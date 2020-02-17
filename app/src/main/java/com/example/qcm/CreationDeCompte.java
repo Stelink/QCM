@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class CreationDeCompte extends Activity {
-
     public static String EXTRA_ID;
     public static String EXTRA_PASS;
     public EditText editID;
@@ -30,17 +29,18 @@ public class CreationDeCompte extends Activity {
     }
 
     public void onClickCreation(View vue){
-        Intent intentSeConnecter = new Intent(CreationDeCompte.this, SeConnecter.class);
+        Intent intentSeConnecter = new Intent(this, MainActivity.class);
         this.id = this.editID.getText().toString();
         this.pass = this.editPass.getText().toString();
-        if(!this.pass.contains("")){
 
+        if(!this.id.contains("P") || !this.pass.contains("1")){
+            Toast t = Toast.makeText(getApplicationContext(), "Vote mdp doit contenir un 1 et votre identifiant doit contenir un P", Toast.LENGTH_SHORT);
+            t.show();
         }
-        intentSeConnecter.putExtra("EXTRA_ID", this.id);
-        intentSeConnecter.putExtra("EXTRA_PASS", this.pass);
-
-        //Toast t = Toast.makeText(getApplicationContext(), this.id + " " + this.pass, Toast.LENGTH_SHORT);
-        //t.show();
-        startActivity(intentSeConnecter);
+        else{
+            intentSeConnecter.putExtra("EXTRA_ID", this.id);
+            intentSeConnecter.putExtra("EXTRA_PASS", this.pass);
+            startActivity(intentSeConnecter);
+        }
     }
 }

@@ -40,8 +40,6 @@ public class CinquiemeQuestionActivity extends Activity {
         if(this.quatre.isChecked()){
             this.score += 1;
             intent.putExtra("EXTRA_SCORE", this.score);
-            Toast t = Toast.makeText(getApplicationContext(), this.score+"", Toast.LENGTH_SHORT);
-            t.show();
             startActivity(intent);
         }
         else{
@@ -52,6 +50,7 @@ public class CinquiemeQuestionActivity extends Activity {
 
     public void onClickAnnuler(View vue){
         Intent intent = new Intent(this, QuatriemeQuestionActivity.class);
+        this.score -= 1;
         startActivity(intent);
     }
 }

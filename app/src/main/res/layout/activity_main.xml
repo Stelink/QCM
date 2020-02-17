@@ -26,6 +26,40 @@
             android:layout_height="100dp"
             app:srcCompat="@drawable/zelda" />
 
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:text="Identifiant" />
+
+        <EditText
+            android:id="@+id/editID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textAlignment="center"
+            android:inputType="textPersonName"
+            android:text="Pseudo" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:text="Mot de passe" />
+
+        <EditText
+            android:id="@+id/editPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="Pass1"
+            android:textAlignment="center"
+            android:inputType="textPassword" />
+
         <Button
             android:onClick="onClickSeConnecter"
             android:id="@+id/connexion"

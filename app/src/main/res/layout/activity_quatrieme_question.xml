@@ -9,7 +9,10 @@
         android:id="@+id/textView9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:textSize="10pt"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:text="Quatrième Question ! " />
 
     <ProgressBar
         android:id="@+id/progress"
@@ -21,19 +24,29 @@
         android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:textSize="10pt"
+        android:textColor="@android:color/black"
+        android:text="Qui n'est pas gentil ?" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    </ListView>
 
     <Button
-        android:onClick="onClickValider"
         android:id="@+id/valider"
+        android:onClick="onClickValider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Valider" />
 
     <Button
-        android:onClick="onClickAnnuler"
         android:id="@+id/annuler"
+        android:onClick="onClickAnnuler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Annuler" />
+
 </LinearLayout>

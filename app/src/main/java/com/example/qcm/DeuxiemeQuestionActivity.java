@@ -46,9 +46,6 @@ public class DeuxiemeQuestionActivity extends Activity {
         if(this.Zelda.isChecked() && this.Ganondorf.isChecked() && this.Link.isChecked() && !this.Tetra.isChecked() && !this.JFA.isChecked()){
             this.score += 1;
             intent3emeQuestion.putExtra("EXTRA_SCORE", this.score);
-
-            Toast t = Toast.makeText(getApplicationContext(), this.score+"", Toast.LENGTH_SHORT);
-            t.show();
             startActivity(intent3emeQuestion);
         }
         else{
@@ -59,6 +56,7 @@ public class DeuxiemeQuestionActivity extends Activity {
 
     public void onClickAnnuler(View vue){
         Intent intent = new Intent(this, PremiereQuestionActivity.class);
+        this.score -= 1;
         startActivity(intent);
     }
 }

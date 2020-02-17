@@ -6,6 +6,9 @@
     android:layout_height="wrap_content">
 
     <TextView
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="10pt"
         android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,6 +24,8 @@
         android:id="@+id/textView11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="10pt"
+        android:textColor="@android:color/black"
         android:text="Dans une pièce carrée. Il y a 4 chats, un chat par coin. En face de chaque chat, il y a trois chats. Combien il y a-t-il de chat dans la pièce carrée ?" />
 
     <RadioGroup

@@ -4,11 +4,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.bumptech.glide.Glide;
 import androidx.annotation.Nullable;
 
 public class Resultat extends Activity {
@@ -17,6 +18,7 @@ public class Resultat extends Activity {
     private TextView score;
     private int resultat;
     private int scoreInt;
+    private ImageView gif;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +35,8 @@ public class Resultat extends Activity {
         resultat();
         Toast t = Toast.makeText(getApplicationContext(), this.scoreInt+"", Toast.LENGTH_SHORT);
         t.show();
+        this.gif = findViewById(R.id.imageView);
+        Glide.with(this).load(R.drawable.waw).into(gif);
     }
 
 

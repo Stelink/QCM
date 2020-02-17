@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="pseudo" />
+        android:text="Pseudo" />
 
     <TextView
         android:textAlignment="center"
@@ -45,7 +45,7 @@
         android:textAlignment="center"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:text="pass"
+        android:text="Pass1"
         android:inputType="textPassword" />
 
     <Button
